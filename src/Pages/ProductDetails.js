@@ -36,9 +36,9 @@ const ProductDetails = () => {
   const products = useSelector(state => state.products);
   const ratedProductsCategory = products.filter(product => product.category === categoryName);
   
-  // useEffect(() => {
-  //   window.scrollTo(0,0)
-  // }, []);
+  useEffect(() => {
+    window.scrollTo(0,0)
+  }, []);
   
   useEffect(() => {
     dispatch(fetchProductsId(id));

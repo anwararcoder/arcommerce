@@ -9,6 +9,7 @@ import Login from '../Pages/Login'
 import Signup from '../Pages/Signup'
 import Dashboard from '../Pages/Dashboard'
 import AddProduct from '../Pages/AddProduct'
+import EditProduct from '../Pages/EditProduct'
 
 const Routers = () => {
   return (
@@ -22,6 +23,7 @@ const Routers = () => {
         <Route path="signup" element={ <Signup /> } />
         <Route path="dashboard" element={ <Dashboard /> } />
         <Route path="addproduct" element={ <AddProduct /> } />
+        <Route path="editproduct/:id" element={ <EditProduct /> } />
     </Routes>
   )
 }

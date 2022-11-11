@@ -60,7 +60,8 @@ const DashboardContainer = () => {
                                                 {/* <button className="btn btn-2">Add</button> */}
                                                 <button onClick={() => deleteProduct(product.id)} className="btn btn-3">Delete</button>
                                                 {/* <button onClick={() => dispatch(deleteItemProducts(product.id))} className="btn btn-3">Delete</button> */}
-                                                <button className="btn btn-2">Edit</button>
+                                                {/* <button className="btn btn-2"></button> */}
+                                                <Link to={`/editproduct/${product.id}`} className="btn btn-2">Edit</Link>
                                                 <Link to={`/shop/${product.id}`} className="btn btn-3">View</Link>
                                             </div>
                                         </div>

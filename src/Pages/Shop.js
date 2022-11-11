@@ -39,6 +39,7 @@ const Shop = () => {
     setProductFilter( products.filter( product => product.productName.toLowerCase().includes( searchValue.toLowerCase() ) ) )
 
   }
+  
 
   return (
     <TitlePage title={"Shop"}>
