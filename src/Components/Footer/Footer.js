@@ -13,19 +13,19 @@ const Footer = () => {
                 <div className='col-sm-6 col-md-6 col-lg-2'>
                     <h5 className='title'>Categories</h5>
                     <ul className='links'>
-                        <li><a href='#'>men's clothing</a></li>
-                        <li><a href='#'>jewelery</a></li>
-                        <li><a href='#'>electronics</a></li>
-                        <li><a href='#'>women's clothing</a></li>
+                        <li><Link to='/shop'>men's clothing</Link></li>
+                        <li><Link to='/shop'>jewelery</Link></li>
+                        <li><Link to='/shop'>electronics</Link></li>
+                        <li><Link to='/shop'>women's clothing</Link></li>
                     </ul>
                 </div>
                 <div className='col-sm-6 col-md-6 col-lg-2'>
                     <h5 className='title'>Useful Links</h5>
                     <ul className='links'>
-                        <li><Link to='products'>Shop</Link></li>
-                        <li><a href='#'>Cart</a></li>
-                        <li><a href='#'>Login</a></li>
-                        <li><a href='#'>Sign Up</a></li>
+                        <li><Link to='/shop'>Shop</Link></li>
+                        <li><Link to='/cart'>Cart</Link></li>
+                        <li><Link to='/login'>Login</Link></li>
+                        <li><Link to='/signup'>Sign Up</Link></li>
                     </ul>
                 </div>
                 <div className='col-sm-12 col-md-6 col-lg-4'>

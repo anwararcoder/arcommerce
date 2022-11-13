@@ -8,6 +8,10 @@ import { fetchProductsId } from '../Redux Toolkit/Slices/ProductsDetailsSlice';
 
 const EditProduct = () => {
 
+    useEffect(() => {
+        window.scrollTo(0,0)
+      }, []);
+
     const [productName, setProductName] = useState('');
     const [imgUrl, setImgUrl] = useState('');
     const [category, setCategory] = useState('');

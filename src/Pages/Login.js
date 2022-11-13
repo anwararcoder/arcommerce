@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import FormLogin from '../Components/Login/FormLogin'
 import TitlePage from '../Components/TitlePage/TitlePage'
 const Login = () => {
+
+  useEffect(() => {
+    window.scrollTo(0,0)
+  }, []);
+
   return (
     <TitlePage title={"Login"}>
       <section className='login-page'>

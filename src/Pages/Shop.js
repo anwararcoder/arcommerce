@@ -6,6 +6,10 @@ import TitlePage from '../Components/TitlePage/TitlePage'
 import { fetchProducts } from '../Redux Toolkit/Slices/ProductsSlice'
 const Shop = () => {
 
+  useEffect(() => {
+    window.scrollTo(0,0)
+  }, []);
+
   const dispatch = useDispatch();
 
   useEffect( () => {

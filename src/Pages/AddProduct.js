@@ -1,10 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import BreadcrumbHeader from '../Components/Breadcrumb Header/BreadcrumbHeader'
 import TitlePage from '../Components/TitlePage/TitlePage'
 
 const AddProduct = () => {
+
+    useEffect(() => {
+        window.scrollTo(0,0)
+      }, []);
 
     const [productName, setProductName] = useState('');
     const [imgUrl, setImgUrl] = useState('');

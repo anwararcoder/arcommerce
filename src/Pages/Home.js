@@ -10,6 +10,10 @@ import OffersStore from '../Components/OffersStore/OffersStore';
 const Home = () => {
   document.title = "ARCommerce - Home" 
 
+  useEffect(() => {
+    window.scrollTo(0,0)
+  }, []);
+
   const dispatch = useDispatch()
   useEffect( () => {
       dispatch(fetchServices());
