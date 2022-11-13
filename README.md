@@ -6,10 +6,8 @@
 `git clone https://github.com/anwararcoder/arcommerce.git`
 
 ### 2- Run Project
-`
-npm install
-npm start
-`
+`npm install`
+`npm start`
 
 ### 3- Run Database Server
 `npm run json-server`
