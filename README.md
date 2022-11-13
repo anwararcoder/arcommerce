@@ -6,12 +6,13 @@
 `git clone https://github.com/anwararcoder/arcommerce.git`
 
 ### 2- Run Project
-`npm install`
-`npm start`
+1-`npm install`
+
+2-`npm start`
 
 ### 3- Run Database Server
 `npm run json-server`
-Open http://localhost:9000/
+Open [http://localhost:9000/products](http://localhost:9000/products)
 
 ### 4- Create User
 Run this on chrome: http://localhost:3000/signup
