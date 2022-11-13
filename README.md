@@ -1,4 +1,4 @@
-# React Js & Redux ToolKit - Full ECommerce Wbsite [AR-Commerce]
+# React Js & Redux ToolKit - Full E-Commerce Wbsite [AR-Commerce]
 
 ## Run Locally
 
