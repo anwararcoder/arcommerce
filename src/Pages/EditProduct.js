@@ -7,25 +7,26 @@ import TitlePage from '../Components/TitlePage/TitlePage';
 import { fetchProductsId } from '../Redux Toolkit/Slices/ProductsDetailsSlice';
 
 const EditProduct = () => {
-
-    useEffect(() => {
-        window.scrollTo(0,0)
-      }, []);
-
+    const id = useParams().id;
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const product = useSelector(state => state.productId);
     const [productName, setProductName] = useState('');
     const [imgUrl, setImgUrl] = useState('');
     const [category, setCategory] = useState('');
     const [price, setPrice] = useState('');
     const [shortDesc, setShortDesc] = useState('');
     const [description, setDescription] = useState('');
-    const navigate = useNavigate();
-    const id = useParams().id;
-    const dispatch = useDispatch();
-    const product = useSelector(state => state.productId);
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
+    useEffect(() => {
+        dispatch( fetchProductsId(id) )
+    }, []);
+    
     const editProduct = (event) => {
         event.preventDefault();
-
         fetch(`http://localhost:9000/products/${id}`, {
             method: 'PUT', // or 'POST'
             headers: {
@@ -40,21 +41,15 @@ const EditProduct = () => {
                 description,
             }),
         })
-            .then((response) => response.json())
-            .then((data) => {
-                toast.success("Product Edited Successfully")
-                navigate('/dashboard')
-                console.log('====================================');
-                console.log(data);
-                console.log('====================================');
-            })
+        .then((response) => response.json())
+        .then((data) => {
+            toast.success("Product Edited Successfully")
+            navigate('/dashboard')
+            console.log('====================================');
+            console.log(data);
+            console.log('====================================');
+        })
     }
-
-    useEffect(() => {
-        dispatch(fetchProductsId(id));
-    }, []);
-
-
 
     return (
         <TitlePage title={`Edit : ${product.productName}`}>
@@ -108,7 +103,6 @@ const EditProduct = () => {
                 </div>
             </section>
         </TitlePage>
-
     )
 }
 
